@@ -45,27 +45,31 @@
         app:rcProgressColor="#FDD835" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardQues"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="125dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
         app:cardCornerRadius="10dp">
 
         <TextView
+            android:id="@+id/ques"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:text="Who is the First Prime Minister of India ?"
+            android:text="Question"
             android:textColor="#0B0019"
             android:textSize="20sp" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:onClick="optionA"
+        android:id="@+id/cardOpA"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="15dp"
@@ -75,18 +79,21 @@
         app:cardCornerRadius="5dp">
 
         <TextView
+            android:id="@+id/opA"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:text="Jawahar Lal Nehru"
+            android:text="a"
             android:textColor="#0B0019"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:onClick="optionB"
+        android:id="@+id/cardOpB"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="15dp"
@@ -96,18 +103,21 @@
         app:cardCornerRadius="5dp">
 
         <TextView
+            android:id="@+id/opB"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:text="Atal Bihari Vajpeyi"
+            android:text="b"
             android:textColor="#0B0019"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:onClick="optionC"
+        android:id="@+id/cardOpC"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="15dp"
@@ -117,18 +127,21 @@
         app:cardCornerRadius="5dp">
 
         <TextView
+            android:id="@+id/opC"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:text="Indra Kumar Gujral"
+            android:text="c"
             android:textColor="#0B0019"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:onClick="optionD"
+        android:id="@+id/cardOpD"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="15dp"
@@ -138,18 +151,20 @@
         app:cardCornerRadius="5dp">
 
         <TextView
+            android:id="@+id/opD"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:text="Narendra Modi"
+            android:text="d"
             android:textColor="#0B0019"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextbtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
