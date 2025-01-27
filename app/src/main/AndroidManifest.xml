@@ -17,7 +17,7 @@
             android:exported="true">
         </activity>
         <activity
-            android:name=".DashboardActivity"
+            android:name=".WinActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"

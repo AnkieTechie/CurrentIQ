@@ -2,6 +2,7 @@ package com.example.currentiq;
 
 import static com.example.currentiq.SplashActivity.list;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -37,6 +38,19 @@ public class MainActivity extends AppCompatActivity {
         model = allList.get(postion);
         setAllQues();
         binding.nextbtn.setClickable(false);
+        binding.exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setMessage("Are you sure you want to exit?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", (dialog, id) -> {
+                            finish();
+                        })
+                        .setNegativeButton("No", null)  // Dismiss dialog when user clicks "No"
+                        .show();
+            }
+        });
 
     }
 
@@ -64,6 +78,12 @@ public class MainActivity extends AppCompatActivity {
             public void onFinish() {
                 Dialog dialog = new Dialog(MainActivity.this, R.style.dialog);
                 dialog.setContentView(R.layout.custom_dialoge);
+                dialog.findViewById(R.id.try_again).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    }
+                });
                 dialog.show();
             }
         }.start();
@@ -117,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void gamewon() {
-        startActivity(new Intent(this, DashboardActivity.class)
+        startActivity(new Intent(this, WinActivity.class)
                 .putExtra("correct",correctCount).putExtra("wrong",wrongCount));
     }
 

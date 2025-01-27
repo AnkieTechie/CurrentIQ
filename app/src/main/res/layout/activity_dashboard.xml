@@ -1,90 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0B0019"
     tools:context=".DashboardActivity">
-    <RelativeLayout
-        android:id="@+id/toolbar"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
         android:background="#24074A">
 
         <ImageView
+            android:id="@+id/hom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="5dp"
-            android:src="@drawable/arrow_back" />
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/headline_24" />
 
         <TextView
+            android:id="@+id/exit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
             android:gravity="center"
-            android:text="Exit"
+            android:text="CurrentIQ"
+            android:fontFamily="sans-serif"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/rel2"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/toolbar"
-        android:layout_centerHorizontal="true">
-
-    <com.mikhaellopez.circularprogressbar.CircularProgressBar
-        android:id="@+id/circularProgressBar"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cpb_background_progressbar_color="@color/red"
-        app:cpb_background_progressbar_width="10dp"
-        app:cpb_progress_direction="to_right"
-        app:cpb_progressbar_color="@color/green"
-        app:cpb_progressbar_width="10dp"
-        app:cpb_progress_max="4"
-        app:cpb_round_border="false" />
+        android:background="@color/white"
+        android:queryHint="Choose your Categories..."
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:listitem="@layout/single_layout">
 
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="22sp"
-            android:layout_centerInParent="true"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rel2"
-        android:layout_centerHorizontal="true">
+    </androidx.recyclerview.widget.RecyclerView>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/share"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:textSize="22dp"
-            android:background="@drawable/btn_share"
-            android:text="Share your Score"
-            android:textColor="@color/white"
-            android:textAllCaps="false"/>
-    </RelativeLayout>
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/sharescore"
-        android:layout_alignParentBottom="true"/>
 
-</RelativeLayout>
+</LinearLayout>
