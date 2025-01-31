@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B0019"
+    android:background="@color/App_bachground"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#24074A">
+        android:background="@color/Action_bar_color">
 
         <ImageView
             android:id="@+id/backbtn"
@@ -59,13 +59,13 @@
             android:id="@+id/ques"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/roboto_black"
             android:gravity="center"
-            android:text="Question"
+            android:text=""
             android:textColor="#0B0019"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -73,7 +73,7 @@
         android:onClick="optionA"
         android:id="@+id/cardOpA"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="15dp"
@@ -84,20 +84,20 @@
             android:id="@+id/opA"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:gravity="center"
-            android:text="a"
+            android:fontFamily="@font/roboto_medium"
+            android:text=""
             android:textColor="#0B0019"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:onClick="optionB"
         android:id="@+id/cardOpB"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
@@ -108,20 +108,20 @@
             android:id="@+id/opB"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:gravity="center"
-            android:text="b"
+            android:text=""
+            android:fontFamily="@font/roboto_medium"
             android:textColor="#0B0019"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:onClick="optionC"
         android:id="@+id/cardOpC"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
@@ -132,43 +132,42 @@
             android:id="@+id/opC"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:gravity="center"
-            android:text="c"
+            android:text=""
+            android:fontFamily="@font/roboto_medium"
             android:textColor="#0B0019"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:onClick="optionD"
         android:id="@+id/cardOpD"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="10dp"
         app:cardCornerRadius="5dp">
 
         <TextView
             android:id="@+id/opD"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:gravity="center"
-            android:text="d"
+            android:text=""
+            android:fontFamily="@font/roboto_medium"
             android:textColor="#0B0019"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nextbtn"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="50dp"

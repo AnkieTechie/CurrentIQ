@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B0019"
+    android:background="@color/App_bachground"
     tools:context=".DashboardActivity">
 
     <LinearLayout
@@ -14,7 +14,7 @@
         android:layout_height="40dp"
         android:layout_gravity="center_vertical"
         android:orientation="horizontal"
-        android:background="#24074A">
+        android:background="@color/Action_bar_color">
 
         <ImageView
             android:id="@+id/hom"
@@ -32,18 +32,22 @@
             android:layout_marginStart="20dp"
             android:gravity="center"
             android:text="CurrentIQ"
-            android:fontFamily="sans-serif"
+            android:fontFamily="sans-serif-black"
             android:textColor="@color/white"
             android:textSize="25sp" />
 
     </LinearLayout>
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_view"
-        android:layout_margin="5dp"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/searchView"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:layout_height="40dp"
+        app:iconifiedByDefault="false"
+        android:background="@drawable/serch_btn"
+        android:drawableLeft="@drawable/search_24"
+        android:drawablePadding="5dp"
+        android:hint="Choose your Category..."
         android:queryHint="Choose your Categories..."
         />
     <androidx.recyclerview.widget.RecyclerView
