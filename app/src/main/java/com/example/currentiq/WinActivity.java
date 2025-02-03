@@ -42,7 +42,7 @@ public class WinActivity extends AppCompatActivity {
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, "CurrentIQ");
-                String shareMessage = "\nHey! I got "+i+ "out of "+total+" ! Think you can do better? \nPlay now and share your score!";
+                String shareMessage = "\nHey! I got "+i+" out of "+total+" ! Think you can do better? \nPlay now and share your score!";
                 /*
                 shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
                */

@@ -48,9 +48,11 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation(libs.firebase.firestore)
+    implementation(libs.firebase.messaging)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation (libs.round.corner.progress.bar)
     implementation ("com.mikhaellopez:circularprogressbar:3.1.0")
+    implementation ("com.airbnb.android:lottie:5.0.3")
 }

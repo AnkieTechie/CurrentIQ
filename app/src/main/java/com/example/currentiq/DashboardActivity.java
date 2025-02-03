@@ -5,9 +5,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
@@ -26,8 +28,11 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         binding = ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        binding.linearToolbar.setOnClickListener(v -> binding.drawer.open());
 
         // Change status bar color
         Window window = getWindow();
@@ -84,6 +89,8 @@ public class DashboardActivity extends AppCompatActivity {
 
                 // Notify the adapter that the data has changed
                 dashboardAdapter.notifyDataSetChanged();
+                binding.lottieAnimationView.setVisibility(View.GONE);
+                binding.recycler.setVisibility(View.VISIBLE);
             } else {
                 // Handle error
                 Toast.makeText(DashboardActivity.this, "Error fetching subjects", Toast.LENGTH_SHORT).show();

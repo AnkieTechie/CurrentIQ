@@ -47,6 +47,7 @@
             android:layout_height="wrap_content"
             android:text="@string/congratulations"
             android:textStyle="bold"
+            android:fontFamily="@font/sans_bold"
             android:textColor="@color/white"
             android:textSize="40sp" />
     </RelativeLayout>
@@ -76,6 +77,7 @@
             android:textColor="@color/white"
             android:textSize="22sp"
             android:gravity="center"
+            android:fontFamily="@font/sansmedium"
             android:text="You got\n"
             android:layout_centerInParent="true"/>
     </RelativeLayout>
@@ -92,6 +94,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:textSize="22sp"
+            android:fontFamily="@font/sanssemibold"
             android:background="@drawable/btn_share"
             android:text="@string/share_your_score"
             android:textColor="@color/white"
